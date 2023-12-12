@@ -93,9 +93,9 @@ const Login = () => {
 
   return (
     <>
-      <div className=" h-[100vh] justify-center items-center w-[100vw] bg-sky-500 flex">
+      <div className=" h-[100vh] justify-center items-center w-[100vw] bg-backgroundColor flex">
         <div className="flex h-[95vh] relative overflow-hidden w-[95vw] rounded-[1.4rem]">
-          <div className=" md:flex hidden justify-center items-center bg-slate-200 h-full w-[60%] rounded-bl-[1rem] rounded-tl-[1rem]  ">
+          <div className=" md:flex hidden justify-center items-center bg-forgroundColor h-full w-[60%] rounded-bl-[1rem] rounded-tl-[1rem]  ">
             <div className="h-[80%] w-[80%] mt-[10rem] flex flex-col items-center">
               <div className="h-[30%] z-10 aspect-square bg-indigo-400  rounded-full"></div>
               <h2 className="text-blue-800 mt-4">CHELSEA FOOTBALL</h2>
@@ -105,12 +105,12 @@ const Login = () => {
               </span>
             </div>
           </div>
-          <div className="md:w-[40%] w-full h-full bg-slate-200 rounded-full flex justify-center items-center">
+          <div className="md:w-[40%] w-full h-full bg-forgroundColor rounded-full flex justify-center items-center">
             {/* login section */}
             {isLogin && (
               <section
                 className="h-[100%]  md:rounded-tl-none
-           overflow-hidden md:rounded-bl-none rounded-[1rem]  p-5 py-16 w-[100%] bg-slate-200 flex flex-col items-center "
+           overflow-hidden md:rounded-bl-none rounded-[1rem]  p-5 py-16 w-[100%] bg-forgroundColor flex flex-col items-center "
               >
                 <div className="h-[25%] z-10 aspect-square bg-indigo-400  rounded-full"></div>
                 <form
@@ -169,7 +169,7 @@ const Login = () => {
                       type="submit"
                       tabIndex={3}
                       value={"LOGIN"}
-                      className="w-[40%] bg-slate-800 rounded-md py-4 text-center font-bold text-xl text-white"
+                      className="w-[40%] bg-buttonColor rounded-md py-4 text-center font-bold text-xl text-white"
                     >
                       LOGIN
                     </button>
@@ -192,7 +192,7 @@ const Login = () => {
             {isLogin || (
               <section
                 className="h-[100%] md:rounded-tl-none
-           overflow-y-auto pb-10 md:rounded-bl-none rounded-[1rem]  p-5 py-16 w-[100%] bg-slate-200 flex flex-col items-center "
+           overflow-y-auto pb-10 md:rounded-bl-none rounded-[1rem]  p-5 py-16 w-[100%] bg-forgroundColor flex flex-col items-center "
               >
                 <div className="h-[25%] z-10 aspect-square bg-indigo-400  rounded-full"></div>
                 <form
@@ -220,7 +220,7 @@ const Login = () => {
                         value={r_details.phoneNumber}
                         pattern="[0-9]{10}"
                       />
-                      <button className="rounded-md w-[20%] py-3 font-bold text-white uppercase bg-indigo-400">
+                      <button className="rounded-md w-[20%] py-3 font-bold text-textColor uppercase bg-buttonColor">
                         get otp
                       </button>
                     </div>
@@ -332,7 +332,7 @@ const Login = () => {
                       tabIndex={7}
                       type="submit"
                       value={"SIGN UP"}
-                      className="w-[40%] bg-slate-800 rounded-md py-4 text-center font-bold text-xl text-white"
+                      className="w-[40%] bg-buttonColor rounded-md py-4 text-center font-bold text-xl text-textColor"
                     >
                       SIGNUP
                     </button>

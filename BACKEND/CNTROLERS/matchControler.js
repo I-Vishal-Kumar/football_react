@@ -334,6 +334,8 @@ const job = schedule.scheduleJob(
   createLiveMatches
 );
 
+createLiveMatches();
+
 process.on("SIGINT", function () {
   schedule.gracefulShutdown();
   process.exit(process.exitCode);

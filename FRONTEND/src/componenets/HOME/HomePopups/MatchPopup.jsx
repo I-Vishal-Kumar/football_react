@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useRef, useEffect, useContext } from "react";
+import { useRef, useEffect } from "react";
 import { useAlert } from "../../../hooks/useAlert";
 import useAxiosPrivate from "../../../hooks/useAxiosPrivate";
 import { useNavigate } from "react-router-dom";
@@ -95,9 +95,9 @@ const MatchPopup = ({
   }
 
   return (
-    <div className="absolute w-full md:w-[91%] h-full bg-purple-400 flex-col flex md:ml-[70px] border-2 border-solid border-white">
+    <div className="absolute w-full md:w-[91%] h-full bg-backgroundColor flex-col flex md:ml-[70px]">
       <div
-        className="h-[25%] bg-black py-4 text-white text-center rounded-bl-[1.4rem] 
+        className="h-[25%] bg-forgroundColor py-4 text-center rounded-bl-[1.4rem] 
         rounded-br-[1.4rem]"
       >
         <h2 className="whitespace-nowrap overflow-hidden h-[20%]">
@@ -156,7 +156,7 @@ const MatchPopup = ({
       </div>
       <div
         style={{ margin: "1rem auto" }}
-        className="text-white rounded-full w-[95%] border-2 border-solid items-center border-black [&>*]:bg-gray-700 [&>*]:py-2 [&>*]:px-4 [&>*]:rounded-full grid grid-cols-3 gap-4 text-center px-4 h-[10%]"
+        className="text-white rounded-full w-[95%] items-center [&>*]:bg-buttonColor [&>*]:py-2 [&>*]:px-4 [&>*]:rounded-full grid grid-cols-3 gap-4 text-center px-4 h-[10%]"
       >
         <h3>ITEM</h3>
         <h3>PROFIT</h3>
@@ -170,11 +170,11 @@ const MatchPopup = ({
               set_confirm(true, i, scores[i]);
             }}
             style={{ margin: "0.5rem auto" }}
-            className=" grid grid-cols-3 text-center items-center  border-b-2 border-solid py-1 border-black w-[95%] justify-center"
+            className=" grid grid-cols-3 text-center items-center  border-b-2 border-solid py-1 border-buttonColor w-[95%] justify-center"
           >
             <h3>{scores[i]}</h3>
             <h3>{percent} %</h3>
-            <h3 className="p-2 py-0 bg-black justify-self-center text-white w-[50%]  rounded-full">
+            <h3 className="p-2 py-0 bg-buttonColor justify-self-center text-textColor w-[50%]  rounded-full">
               BET
             </h3>
           </span>
@@ -240,12 +240,12 @@ const MatchPopup = ({
           </div>
           <div
             style={{ margin: "0 auto" }}
-            className="bg-gray-900 flex justify-evenly py-[0.25rem] text-white rounded-full text-center w-[70%]"
+            className="bg-forgroundColor flex justify-evenly py-[0.25rem] text-black rounded-full text-center w-[70%]"
           >
             <h4>{confirmed_data.date}</h4>
             <h4>{confirmed_data.time}</h4>
           </div>
-          <div className="rounded-[1.25rem] bg-black text-white text white pb-3 px-1 mt-4">
+          <div className="rounded-[1.25rem] bg-forgroundColor  text-black pb-3 px-1 mt-4">
             <div
               style={{ gridTemplateColumns: "1.5fr 1fr 1fr" }}
               className="grid  text-center py-3 "
@@ -284,7 +284,7 @@ const MatchPopup = ({
             </div>
           </div>
           <div className="flex [&>*]:py-3 [&>*]:border-2 [&>*]:w-[40%] mt-10 [&>*]:rounded-full justify-evenly">
-            <h2 onClick={placeBet} className="bg-gray-800 text-white">
+            <h2 onClick={placeBet} className="bg-buttonColor text-white">
               CONFIRM
             </h2>
             <h2

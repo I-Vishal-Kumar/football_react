@@ -40,9 +40,9 @@ const Layout = () => {
     <>
       <Header />
       <main className="grid grid-cols-8 h-fit  overflow-y-hidden ">
-        <section className="bg-red-500 relative flex col-start-1 col-end-9 h-full col-span-7 md:col-end-6 ">
+        <section className=" bg-backgroundColor relative flex col-start-1 col-end-9 h-full col-span-7 md:col-end-6 ">
           {/* side toggler for big screens */}
-          <div className=" z-20 hidden md:block md:absolute md:visible hover:w-fit hover:text-black text-transparent h-full w-[70px] overflow-hidden py-2 pt-8 bg-slate-100 rounded-r-md">
+          <div className=" z-20 hidden md:block md:absolute md:visible hover:w-fit hover:text-black text-transparent h-full w-[70px] overflow-hidden py-2 pt-8 bg-forgroundColor rounded-r-md">
             <ul>
               <li className="flex pr-9 hover:shadow-md mb-2 items-center">
                 <Link className="flex items-center" to="home">
@@ -120,7 +120,7 @@ const Layout = () => {
           <Outlet />
           {alertState?.state && <AlertBox />}
         </section>
-        <section className=" border-solid border-2 border-green-800 p-10 px-14 col-start-6 md:block hidden h-full col-end-9">
+        <section className="p-10 px-14 bg-backgroundColor col-start-6 md:block hidden h-full col-end-9">
           <Usercard />
         </section>
       </main>

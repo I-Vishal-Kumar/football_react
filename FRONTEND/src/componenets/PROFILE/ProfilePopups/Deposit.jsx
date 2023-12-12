@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
 const Deposit = () => {
   return (
-    <div className=" w-full flex-col flex md:ml-[70px] border-2 border-solid border-white">
+    <div className=" w-full flex-col bg-accentColor flex md:ml-[70px] ">
       <section
         style={{ padding: "1rem 0" }}
-        className="grid relative place-content-center"
+        className="grid relative place-content-center bg-accentColor"
       >
         <div className="text-center">
-          <div className="h-[100px] rounded-full aspect-square border-2 border-solid border-white ">
+          <div className="h-[100px] rounded-full aspect-square bg-blue-400 ">
             h
           </div>
           <h3 className="text-white font-bold ">Name</h3>
         </div>
       </section>
-      <section className="h-[70vh] overflow-y-auto pb-[10rem] rounded-tl-[2.5rem] px-4 rounded-tr-[2.5rem] bg-slate-200 pt-4">
+      <section className="h-[70vh] overflow-y-auto pb-[10rem] rounded-tl-[2.5rem] px-4 rounded-tr-[2.5rem] bg-forgroundColor pt-4">
         <div className="flex font-bold text-xl w-full justify-between py-4 mt-4">
           <span
             style={{ width: "45%", letterSpacing: "1px" }}

@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: "#fed9ed";
+  --secondary: "#egbcde";
+  --buttons: "#67729d";
+  --tertiory: "#bb9cc0";
+}
+
 * {
   margin: 0;
   padding: 0;

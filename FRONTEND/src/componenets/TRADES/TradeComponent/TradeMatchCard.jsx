@@ -3,7 +3,7 @@ const TradeMatchCard = ({ data, cancel_bet }) => {
   return (
     <div
       style={{ boxShadow: "0 0 10px -3px grey" }}
-      className="w-full relative pt-1 mb-6 grid "
+      className="w-full relative bg-accentColor pt-1 mb-6 grid "
     >
       <div className="text-center">
         <h2 className="capitalize">
@@ -26,7 +26,7 @@ const TradeMatchCard = ({ data, cancel_bet }) => {
       </div>
       <div
         style={{ gridTemplateColumns: "1fr 0.5fr 0.5fr 0.5fr" }}
-        className="rounded-md grid w-full mt-4 bg-black text-white"
+        className="rounded-md grid w-full mt-4 bg-buttonColor text-textColor"
       >
         <div>
           <h4 className="text-transparent">_</h4>
@@ -57,7 +57,7 @@ const TradeMatchCard = ({ data, cancel_bet }) => {
       {cancel_authorise(data?.raw_date) && (
         <div
           onClick={() => cancel_bet(data?.id || 0, data?.raw_date || 0)}
-          className=" cursor-pointer justify-self-end items-center flex mr-3 px-3 mt-1 bg-red-500 rounded-full text-white"
+          className=" cursor-pointer justify-self-end items-center flex mr-3 px-3 mt-1 bg-red-400 rounded-full text-white"
         >
           <span
             style={{ fontSize: "20px" }}

@@ -47,7 +47,7 @@ const Profile = () => {
     },
   ];
   return (
-    <div className=" relative z-10 w-full flex-col flex md:ml-[70px] border-2 border-solid border-white">
+    <div className=" relative z-10 w-full flex-col bg-accentColor flex md:ml-[70px]">
       {/* avatar section */}
       <section
         style={{ padding: "2rem 0" }}
@@ -70,7 +70,7 @@ const Profile = () => {
           maxHeight: "75dvh",
           paddingBottom: "10rem",
         }}
-        className="overflow-y-auto bg-white"
+        className="overflow-y-auto bg-forgroundColor"
       >
         {/* money handeling section */}
         <div className="flex font-bold text-xl w-full text-center justify-between p-4 mt-4">

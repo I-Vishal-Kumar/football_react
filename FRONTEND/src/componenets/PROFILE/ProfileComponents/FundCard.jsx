@@ -2,7 +2,7 @@ const FundCard = () => {
   return (
     <div
       style={{ margin: "1rem auto" }}
-      className=" bg-slate-200 w-[90%] rounded-xl p-2 mt-4"
+      className=" bg-accentColor  w-[90%] rounded-xl p-2 mt-4"
     >
       <div className="flex justify-between">
         <h3>WITHDRAWAL</h3>

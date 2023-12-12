@@ -198,7 +198,7 @@ const PersonalInfo = () => {
             action="#"
             onSubmit={change_name}
             style={{ margin: "0 auto" }}
-            className="p-[1rem] bg-slate-300 md:w-[80%] w-[95%] rounded-[1.25rem] py-[4rem]"
+            className="p-[1rem] bg-forgroundColor md:w-[80%] w-[95%] rounded-[1.25rem] py-[4rem]"
           >
             <h3
               style={{ margin: "0 auto" }}
@@ -248,7 +248,7 @@ const PersonalInfo = () => {
             action="#"
             onSubmit={change_withdraw_pass}
             style={{ margin: "0 auto" }}
-            className="p-[1rem] bg-slate-300 md:w-[80%] w-[95%] rounded-[1.25rem] py-[4rem]"
+            className="p-[1rem] bg-forgroundColor md:w-[80%] w-[95%] rounded-[1.25rem] py-[4rem]"
           >
             <h3
               style={{ margin: "0 auto" }}
@@ -307,7 +307,7 @@ const PersonalInfo = () => {
               </div>
               <div
                 style={{ alignSelf: "end" }}
-                className="bg-purple-600  text-white px-[1rem] py-[0.25rem] rounded-full"
+                className="bg-buttonColor  text-white px-[1rem] py-[0.25rem] rounded-full"
               >
                 get OTP
               </div>
@@ -339,7 +339,7 @@ const PersonalInfo = () => {
             action="#"
             onSubmit={change_pass}
             style={{ margin: "0 auto" }}
-            className="p-[1rem] bg-slate-300 md:w-[80%] w-[95%] rounded-[1.25rem] py-[4rem]"
+            className="p-[1rem] bg-forgroundColor md:w-[80%] w-[95%] rounded-[1.25rem] py-[4rem]"
           >
             <h3
               style={{ margin: "0 auto" }}
@@ -398,7 +398,7 @@ const PersonalInfo = () => {
               </div>
               <div
                 style={{ alignSelf: "end" }}
-                className="bg-purple-600  text-white px-[1rem] py-[0.25rem] rounded-full"
+                className="bg-buttonColor  text-white px-[1rem] py-[0.25rem] rounded-full"
               >
                 get OTP
               </div>
@@ -430,7 +430,7 @@ const PersonalInfo = () => {
             action="#"
             onSubmit={change_number}
             style={{ margin: "0 auto" }}
-            className="p-[1rem] bg-slate-300 md:w-[80%] w-[95%] rounded-[1.25rem] py-[4rem]"
+            className="p-[1rem] bg-forgroundColor md:w-[80%] w-[95%] rounded-[1.25rem] py-[4rem]"
           >
             <h3
               style={{ margin: "0 auto" }}
@@ -474,7 +474,7 @@ const PersonalInfo = () => {
               </div>
               <div
                 style={{ alignSelf: "end" }}
-                className="bg-purple-600  text-white px-[1rem] py-[0.25rem] rounded-full"
+                className="bg-buttonColor  text-white px-[1rem] py-[0.25rem] rounded-full"
               >
                 get OTP
               </div>

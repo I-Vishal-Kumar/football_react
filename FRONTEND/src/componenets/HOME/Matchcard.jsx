@@ -13,7 +13,7 @@ const Matchcard = ({
   }
   return (
     <div
-      className="w-full pt-1 px-4 border-2 border-solid border-black mb-3"
+      className="w-full pt-1 px-4 bg-forgroundColor shadow-md mb-3"
       onClick={cardClick}
     >
       <div className="text-center">

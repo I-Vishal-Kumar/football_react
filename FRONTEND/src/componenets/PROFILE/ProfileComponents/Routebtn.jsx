@@ -24,7 +24,10 @@ const Routebtn = ({
           placeContent: "center",
           boxShadow: " 0 0 10px -3px grey",
         }}
-        className={"grid rounded-full items-center mb-4 " + style}
+        className={
+          "grid rounded-full bg-accentColor text-textColor items-center mb-4 " +
+          style
+        }
       >
         <div className="grid place-content-center">
           <span

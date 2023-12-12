@@ -124,7 +124,7 @@ const HomePopup = () => {
 
   return (
     <>
-      <div className=" w-full flex-col flex md:ml-[70px] border-2 border-solid border-white">
+      <div className=" w-full flex-col flex md:ml-[70px]">
         <div
           style={{ height: "30vh" }}
           className=" h-2/6 grid place-content-center "
@@ -135,7 +135,7 @@ const HomePopup = () => {
           id="matches_box"
           ref={matches_box}
           style={{ height: "calc(100vh - 30vh - 60px)" }}
-          className=" pb-24 pt-8 px-4 max-h-4/6 border-2 border-solid border-white overflow-y-auto "
+          className=" pb-24 pt-8 px-4 max-h-4/6  overflow-y-auto "
         >
           {matches.length > 2 &&
             matches

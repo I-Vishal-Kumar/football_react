@@ -3,7 +3,7 @@ const RecordMatchCard = ({ data }) => {
   return (
     <div
       style={{ boxShadow: "0 0 10px -3px grey" }}
-      className="w-full pt-1 mb-6 "
+      className="w-full bg-accentColor pt-1 mb-6 "
     >
       <div className="text-center">
         <h3>{data.leagueName ? data.leagueName : "Test"}</h3>
@@ -24,7 +24,7 @@ const RecordMatchCard = ({ data }) => {
       </div>
       <div
         style={{ gridTemplateColumns: "1fr 0.5fr 0.5fr 0.5fr" }}
-        className="rounded-md grid w-full mt-4 bg-black text-white"
+        className="rounded-md grid w-full mt-4 bg-buttonColor text-textColor"
       >
         <div>
           <h4 className="text-transparent">_</h4>

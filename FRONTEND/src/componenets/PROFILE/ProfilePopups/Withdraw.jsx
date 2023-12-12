@@ -2,7 +2,7 @@ import Card from "../ProfileComponents/Card";
 import { Link } from "react-router-dom";
 const Withdraw = () => {
   return (
-    <div className=" w-full flex-col flex md:ml-[70px] border-2 border-solid border-white">
+    <div className=" w-full flex-col flex md:ml-[70px] bg-accentColor">
       <section
         style={{ padding: "1rem 0" }}
         className="grid relative place-content-center"
@@ -16,7 +16,7 @@ const Withdraw = () => {
       </section>
       <section
         style={{ boxShadow: "0 0 8px -2px grey" }}
-        className="h-[70vh] overflow-y-auto pb-[10rem] rounded-tl-[2.5rem] px-4 rounded-tr-[2.5rem] bg-slate-200 pt-4"
+        className="h-[70vh] overflow-y-auto pb-[10rem] rounded-tl-[2.5rem] px-4 rounded-tr-[2.5rem] bg-forgroundColor pt-4"
       >
         <div className="flex font-bold text-xl w-full justify-center py-4 mt-4">
           <span
@@ -52,7 +52,7 @@ const Withdraw = () => {
         </div>
 
         <div className="grid mt-8 grid-cols-2 gap-3">
-          <div className=" bg-gray-900 rounded-full text-center p-4 text-white">
+          <div className=" bg-buttonColor rounded-full text-center p-4 text-white">
             REQUEST
           </div>
           <Link to={"../profile"}>

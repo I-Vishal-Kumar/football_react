@@ -77,7 +77,7 @@ const PersonalInfo = () => {
   }
 
   return (
-    <div className=" w-full relative flex-col flex md:ml-[70px] bg-white border-2 border-solid border-white">
+    <div className=" w-full relative flex-col flex md:ml-[70px] bg-backgroundColor border-2 border-solid border-white">
       <section style={{ padding: "4rem 6rem" }}>
         <div className="flex text-center justify-between ">
           <div>
@@ -96,7 +96,7 @@ const PersonalInfo = () => {
       </section>
       <section
         style={{ boxShadow: "0 0 8px -2px grey" }}
-        className="h-[70vh] overflow-y-auto pb-[10rem] rounded-tl-[2.5rem] px-4 rounded-tr-[2.5rem] bg-slate-200 pt-14"
+        className="h-[70vh] overflow-y-auto pb-[10rem] rounded-tl-[2.5rem] px-4 rounded-tr-[2.5rem] bg-forgroundColor pt-14"
       >
         {button_data.map((item, idx) => (
           <div key={idx}>

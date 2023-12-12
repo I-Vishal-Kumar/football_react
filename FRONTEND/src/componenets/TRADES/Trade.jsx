@@ -12,7 +12,6 @@ const Trade = () => {
     async function getOngoingMatches() {
       try {
         let res = await axiosPrivate("ongoingBet");
-        console.log(res);
         if (res?.data?.data) {
           setData(res?.data?.data);
         }
@@ -34,7 +33,6 @@ const Trade = () => {
         id,
         raw_date,
       });
-      console.log(res);
       getAlert(res?.data?.message || "something went wrong");
     } catch (error) {
       console.log(error);
@@ -44,11 +42,11 @@ const Trade = () => {
   }
 
   return (
-    <div className=" relative z-10 w-full flex-col flex md:ml-[70px]">
+    <div className=" relative z-10 w-full bg-accentColor flex-col flex md:ml-[70px]">
       {/* avatar section */}
       <section
         style={{ padding: "4rem 0" }}
-        className="grid relative bg-blue-500 place-content-center"
+        className="grid relative bg-accentColor place-content-center"
       ></section>
       {/* Trade navigators */}
       <section
@@ -57,7 +55,7 @@ const Trade = () => {
           height: "75dvh",
           paddingBottom: "10rem",
         }}
-        className=" pt-6 font-bold text-center bg-slate-200"
+        className=" pt-6 font-bold text-center bg-backgroundColor"
       >
         <h1>TRADES</h1>
         <div className="p-4 overflow-y-auto h-[75dvh] pb-[10rem] ">

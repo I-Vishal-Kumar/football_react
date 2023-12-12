@@ -2,7 +2,7 @@ import { Home as Homelogo, Hourglass, Person, Receipt } from "react-ionicons";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="block py-1 px-2 w-full z-40 bg-blue-500 absolute bottom-0 border-2 border-solid border-l-indigo-700 md:hidden">
+    <footer className="block py-1 px-2 w-full z-40 bg-accentColor absolute bottom-0 border-2 border-solid border-l-indigo-700 md:hidden">
       <ul className=" grid grid-cols-5 text-center place-items-center items-center ">
         <Link to={"home"}>
           <li className="grid justify-center align-center">
