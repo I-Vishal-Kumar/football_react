@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Explora&family=Heebo:wght@100;200;300;400;500;600;700;800&family=Unbounded:wght@400;500&family=Work+Sans:wght@100;300;400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: 0px;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  overflow-y: hidden;
+}
+/* 
+
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 950px) {
+  /* pc media querry */
+/* html {
+    font-size: 20px;
+  }
+} */
+
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 12px;
+  }
+  @layer base {
+    h1 {
+      font-size: 2.125rem;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 1.875rem;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    h4 {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    h5 {
+      font-size: 1.125rem;
+      font-weight: bold;
+    }
+    h6 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+}
+@media screen and (min-width: 950px) {
+  /*  pc media querry */
+  /* html {
+    font-size: 20px;
+  } */
+
+  @layer base {
+    h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 1.35rem;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 1.125rem;
+      font-weight: bold;
+    }
+    h4 {
+      font-size: 1.05rem;
+      font-weight: bold;
+    }
+    h5 {
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    h6 {
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+  }
+}
