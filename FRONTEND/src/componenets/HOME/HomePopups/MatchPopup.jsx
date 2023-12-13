@@ -4,6 +4,7 @@ import { useAlert } from "../../../hooks/useAlert";
 import useAxiosPrivate from "../../../hooks/useAxiosPrivate";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../../../hooks/userContext";
+import vslogo from "../HomeAssets/vslogo.png";
 const MatchPopup = ({
   update_confirm_data,
   confirmed_data,
@@ -126,6 +127,8 @@ const MatchPopup = ({
           </div>
           <div
             style={{
+              background: `url(${vslogo}) center no-repeat`,
+              backgroundSize: "70%",
               gridTemplateRows: "1fr ",
             }}
             className="grid"
@@ -212,6 +215,8 @@ const MatchPopup = ({
             <div
               style={{
                 gridTemplateRows: "2fr 0.5fr",
+                background: `url(${vslogo}) center no-repeat`,
+                backgroundSize: "60%",
               }}
               className="grid"
             >

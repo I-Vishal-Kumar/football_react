@@ -1,4 +1,5 @@
 import { PropTypes } from "prop-types";
+import vslogo from "./HomeAssets/vslogo.png";
 const Matchcard = ({
   leagueName,
   index,
@@ -31,7 +32,13 @@ const Matchcard = ({
             {team_b ? team_b : "Team_b"}
           </h3>
         </div>
-        <div>LOGO</div>
+        <div
+          style={{
+            background: `url(${vslogo}) center no-repeat`,
+            backgroundSize: "contain",
+            height: "70%",
+          }}
+        ></div>
         <div>
           <h3>{parsed_date ? parsed_date : "Today"}</h3>
           <h3>{time ? time : "00.00"}</h3>

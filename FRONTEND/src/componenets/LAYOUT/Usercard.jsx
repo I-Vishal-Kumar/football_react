@@ -1,4 +1,6 @@
 import { useUserContext } from "../../hooks/userContext";
+import LOGO from "../HOME/HomeAssets/LOGO.png";
+
 const Usercard = () => {
   let { userData } = useUserContext();
   return (
@@ -10,7 +12,7 @@ const Usercard = () => {
       className=" px-4 py-2 pb-12 rounded-md  text-textColor flex flex-col "
     >
       <div className="w-full p-2 grid place-content-center ">
-        <img src="" className=" h-36 aspect-square" alt="n" />
+        <img src={LOGO} className=" h-36 aspect-square" alt="n" />
       </div>
 
       {/* user data */}
