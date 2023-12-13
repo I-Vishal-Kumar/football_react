@@ -77,7 +77,7 @@ const MatchPopup = ({
 
   function updateAmount(e) {
     let amount = parseFloat(e.target.value) || parseFloat(e.target.innerText);
-    if (!amount && !e.target.innerText) amount = 0;
+    if (!amount && !e.target.innerText) amount = "";
     if (!amount && e.target.innerText?.length > 2) {
       amount = Number(userData?.balance) / 100 || 10;
     }
@@ -97,7 +97,7 @@ const MatchPopup = ({
   return (
     <div className="absolute w-full md:w-[91%] h-full bg-backgroundColor flex-col flex md:ml-[70px]">
       <div
-        className="h-[25%] bg-forgroundColor py-4 text-center rounded-bl-[1.4rem] 
+        className="  py-4 text-center rounded-bl-[1.4rem] 
         rounded-br-[1.4rem]"
       >
         <h2 className="whitespace-nowrap overflow-hidden h-[20%]">
@@ -106,7 +106,7 @@ const MatchPopup = ({
         <div className="grid h-[80%] py-2 px-4 [&>*]:h-full grid-cols-3">
           <div
             style={{
-              gridTemplateRows: "1fr 0.5fr",
+              gridTemplateRows: "1fr",
             }}
             className="grid"
           >
@@ -126,7 +126,7 @@ const MatchPopup = ({
           </div>
           <div
             style={{
-              gridTemplateRows: "1fr 0.5fr",
+              gridTemplateRows: "1fr ",
             }}
             className="grid"
           >
@@ -135,7 +135,7 @@ const MatchPopup = ({
           </div>
           <div
             style={{
-              gridTemplateRows: "1fr 0.5fr",
+              gridTemplateRows: "1fr ",
             }}
             className="grid"
           >
@@ -156,7 +156,7 @@ const MatchPopup = ({
       </div>
       <div
         style={{ margin: "1rem auto" }}
-        className="text-white rounded-full w-[95%] items-center [&>*]:bg-buttonColor [&>*]:py-2 [&>*]:px-4 [&>*]:rounded-full grid grid-cols-3 gap-4 text-center px-4 h-[10%]"
+        className="text-white mt-[3rem] bg-forgroundColor rounded-full w-[95%] items-center [&>*]:bg-buttonColor [&>*]:py-2 [&>*]:px-4 [&>*]:rounded-full grid grid-cols-3 gap-4 text-center px-4 h-[10%]"
       >
         <h3>ITEM</h3>
         <h3>PROFIT</h3>

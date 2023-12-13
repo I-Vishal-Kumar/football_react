@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 const Deposit = () => {
   return (
-    <div className=" w-full flex-col bg-accentColor flex md:ml-[70px] ">
+    <div className=" w-full flex-col bg-backgroundColor flex md:ml-[70px] ">
       <section
         style={{ padding: "1rem 0" }}
-        className="grid relative place-content-center bg-accentColor"
+        className="grid relative place-content-center bg-backgroundColor"
       >
         <div className="text-center">
           <div className="h-[100px] rounded-full aspect-square bg-blue-400 ">

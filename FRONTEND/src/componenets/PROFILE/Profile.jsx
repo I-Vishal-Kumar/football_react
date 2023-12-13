@@ -47,7 +47,7 @@ const Profile = () => {
     },
   ];
   return (
-    <div className=" relative z-10 w-full flex-col bg-accentColor flex md:ml-[70px]">
+    <div className=" relative z-10 w-full flex-col bg-backgroundColor flex md:ml-[70px]">
       {/* avatar section */}
       <section
         style={{ padding: "2rem 0" }}

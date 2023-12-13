@@ -2,7 +2,7 @@ import Card from "../ProfileComponents/Card";
 import { Link } from "react-router-dom";
 const Withdraw = () => {
   return (
-    <div className=" w-full flex-col flex md:ml-[70px] bg-accentColor">
+    <div className=" w-full flex-col flex md:ml-[70px] bg-backgroundColor">
       <section
         style={{ padding: "1rem 0" }}
         className="grid relative place-content-center"

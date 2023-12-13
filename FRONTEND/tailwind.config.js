@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        backgroundColor: "#fed9ed",
-        forgroundColor: "#e7bcde",
-        accentColor: "#bb9cc0",
-        buttonColor: "#67729d",
+        backgroundColor: "#d8d8de",
+        forgroundColor: "#e7e8ec",
+        accentColor: "#496aff",
+        buttonColor: "#49108b",
         textColor: "#fffbf5",
-        header_background: "#001489",
+        header_background: "#496aff",
       },
       height: {
         18: "60px",

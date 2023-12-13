@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "../../hooks/axios";
 import AuthContext from "../../hooks/AuthContext";
 import AlertBox from "../LAYOUT/AlertBox";
+import LOGO from "../HOME/HomeAssets/LOGO.png";
 import { useAlert } from "../../hooks/useAlert";
 
 const Login = () => {
@@ -97,7 +98,13 @@ const Login = () => {
         <div className="flex h-[95vh] relative overflow-hidden w-[95vw] rounded-[1.4rem]">
           <div className=" md:flex hidden justify-center items-center bg-forgroundColor h-full w-[60%] rounded-bl-[1rem] rounded-tl-[1rem]  ">
             <div className="h-[80%] w-[80%] mt-[10rem] flex flex-col items-center">
-              <div className="h-[30%] z-10 aspect-square bg-indigo-400  rounded-full"></div>
+              <div
+                style={{
+                  background: `url(${LOGO}) center no-repeat`,
+                  backgroundSize: "contain",
+                }}
+                className="h-[30%] z-10 aspect-square bg-indigo-400  rounded-full"
+              ></div>
               <h2 className="text-blue-800 mt-4">CHELSEA FOOTBALL</h2>
               <span className="mt-[5rem] flex">
                 HELLO THERE THE NAME IS VISHAL AN I AM HERE
@@ -112,7 +119,13 @@ const Login = () => {
                 className="h-[100%]  md:rounded-tl-none
            overflow-hidden md:rounded-bl-none rounded-[1rem]  p-5 py-16 w-[100%] bg-forgroundColor flex flex-col items-center "
               >
-                <div className="h-[25%] z-10 aspect-square bg-indigo-400  rounded-full"></div>
+                <div
+                  style={{
+                    background: `url(${LOGO}) center no-repeat`,
+                    backgroundSize: "contain",
+                  }}
+                  className="h-[25%] z-10 aspect-square bg-indigo-400  rounded-full"
+                ></div>
                 <form
                   onSubmit={LOGIN}
                   className=" [&>*]:flex z-10 [&>*]:py-4 w-full p-4"
@@ -194,7 +207,13 @@ const Login = () => {
                 className="h-[100%] md:rounded-tl-none
            overflow-y-auto pb-10 md:rounded-bl-none rounded-[1rem]  p-5 py-16 w-[100%] bg-forgroundColor flex flex-col items-center "
               >
-                <div className="h-[25%] z-10 aspect-square bg-indigo-400  rounded-full"></div>
+                <div
+                  style={{
+                    background: `url(${LOGO}) center no-repeat`,
+                    backgroundSize: "contain",
+                  }}
+                  className="h-[25%] z-10 aspect-square bg-indigo-400  rounded-full"
+                ></div>
                 <form
                   onSubmit={SIGNUP}
                   className=" [&>*]:flex z-10 [&>*]:py-4 w-full p-4"
@@ -206,7 +225,7 @@ const Login = () => {
                     >
                       Phone
                     </label>
-                    <div>
+                    <div className="flex gap-x-[0.5rem]">
                       <input
                         autoFocus
                         tabIndex={1}

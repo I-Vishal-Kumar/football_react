@@ -2,7 +2,13 @@ import { useUserContext } from "../../hooks/userContext";
 const Usercard = () => {
   let { userData } = useUserContext();
   return (
-    <div className=" px-4 py-2 pb-12 rounded-md bg-accentColor flex flex-col ">
+    <div
+      style={{
+        background:
+          "linear-gradient(55deg, rgba(2,0,36,1) 0%, rgb(61 133 242) 0%, rgb(74 195 244) 100%)",
+      }}
+      className=" px-4 py-2 pb-12 rounded-md  text-textColor flex flex-col "
+    >
       <div className="w-full p-2 grid place-content-center ">
         <img src="" className=" h-36 aspect-square" alt="n" />
       </div>
