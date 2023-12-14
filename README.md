@@ -35,12 +35,14 @@ Before you begin, make sure you have the following installed:
    cd DIRECTORY NAME
    
 3.Install dependencies for both BACKEND and FRONTEND
+ 
+   ```bash
    cd BACKEND
    npm install
     
    cd ../FRONTEND
    npm install
-
+  ```
 
 
 ## Configuration
@@ -48,6 +50,18 @@ Before you begin, make sure you have the following installed:
  1. Add a dotenv file in both FRONTEND and BACKEND.
 
     add the required environment variables as mentioned in demoEnv.txt file present in both folders
+
+## Run 
+
+ 1. Start the BACKEND.
+    ```bash
+     npm run dev
+    ```
+2. Start the FRONTEND.
+   ```bash
+   npm run dev
+   ```
+  #NOTE make sure that you are in the respective folders while runing the commands
 
 ## Technologies used
 
