@@ -1,3 +1,12 @@
+# Note
+
+get otp button is not working but is connected to fast two sms which requires a account and some recharge in it .
+
+BUT YOU CAN USE MY CREDENTIALS TO LOGIN.
+
+PHONE NUMBER - 9162871357
+PASSWORD - 123
+
 # Football Betting Website
 
 Welcome to the Football Betting Website! This project features a full-stack application with user authentication using JSON Web Tokens (JWT), a React frontend, and a Node.js backend.
