@@ -1,6 +1,7 @@
 const { USER, JWT, bcrypt } = require("../IMPORTS/imports");
 const { errorLogger } = require("../MIDDLEWARE/errorLogger");
-// const { USER } = require("../MODALS/db");
+const fast2sms = require("fast2sms");
+const axios = require("axios");
 
 const ACCESS_SECRET = process.env.ACCESS_SECRET;
 const REFRESH_SECRET = process.env.REFRESH_SECRET;
@@ -55,9 +56,14 @@ class loginSignup {
   };
 
   static SIGNUP = async (req, res) => {
+    let cookies = req.cookies;
+    if (!cookies?.otp_token)
+      return res.send({ status: "err", message: "something went wrong" });
+
     if (req?.cookies) {
       Object.keys(req.cookies).forEach((item) => res.clearCookie(item));
     }
+
     const { pass, otp, phoneNumber, name, invitationCode } = req.body;
     if (!pass || !otp || !phoneNumber || !name)
       return res
@@ -74,6 +80,7 @@ class loginSignup {
       } else {
         invitationCode = 0;
       }
+      await verifyOtp(cookies.otp_token, phoneNumber, otp);
 
       // hash the password
       const hashed_pass = await bcrypt.hash(pass, 8);
@@ -133,6 +140,67 @@ class loginSignup {
     }
     // JWT.sign(userName , )
   };
+
+  static getOtp = async (req, res) => {
+    let { phoneNumber } = req.body;
+    if (!phoneNumber)
+      return res.send({ satus: "err", message: "enter a valid phone number" });
+
+    res.clearCookie("otp_token");
+
+    const apiUrl = "https://www.fast2sms.com/dev/bulkV2";
+    const apiKey = `${process.env.FAST2SMS_KEY}`;
+
+    const otp = Math.floor(Math.random() * 200000 + 1000);
+    console.log(otp);
+    const requestData = {
+      authorization: `${apiKey}`,
+      variables_values: `${otp}`,
+      route: "otp",
+      numbers: `${phoneNumber}`,
+    };
+
+    try {
+      const response = await axios.get(apiUrl, {
+        headers: {
+          "cache-control": "no-cache",
+        },
+        params: requestData,
+      });
+
+      if (response?.data?.return === true) {
+        let otp_token = JWT.sign({ phoneNumber, otp }, process.env.OTP_SECRET, {
+          expiresIn: "2m",
+        });
+        res.cookie("otp_token", otp_token, { maxAge: 4 * 60 * 1000 });
+        return res.send({ status: "ok", message: "otp sent" });
+      }
+      return res.send({ status: "err", message: "something went wrong" });
+    } catch (error) {
+      console.log(error);
+      errorLogger(error?.code || 1, "loginSignup -> getOtp", error);
+      return res.send({ status: "Err", message: "something went wrong" });
+    }
+  };
+}
+
+async function verifyOtp(token, phoneNumber, otp) {
+  JWT.verify(token, process.env.OTP_SECRET, (err, decoded) => {
+    try {
+      if (err) throw new Error("got some error");
+      if (
+        Number(decoded?.otp) !== Number(otp) ||
+        Number(phoneNumber) !== Number(decoded.phoneNumber)
+      ) {
+        throw new Error("invalid OTP");
+      } else {
+        return true;
+      }
+    } catch (error) {
+      errorLogger(error?.code || 12, "loginSignup -> verifyOtp", error);
+      throw new Error(error?.message || "something went wrong");
+    }
+  });
 }
 
 module.exports = { loginSignup };

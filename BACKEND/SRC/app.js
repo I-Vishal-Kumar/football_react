@@ -80,3 +80,4 @@ app.get("/ongoingBet", authorised, matchControler.getOngoingBets);
 app.post("/create_account", authorised, UserControler.create_account);
 app.post("/deleteBet", authorised, matchControler.deleteBet);
 app.get("/getBetHistory", authorised, matchControler.getHistoryBets);
+app.post("/getOtp", loginSignup.getOtp);

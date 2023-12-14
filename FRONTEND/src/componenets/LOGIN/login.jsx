@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "../../hooks/axios";
+import axios, { axiosPrivate } from "../../hooks/axios";
 import AuthContext from "../../hooks/AuthContext";
 import AlertBox from "../LAYOUT/AlertBox";
 import LOGO from "../HOME/HomeAssets/LOGO.png";
@@ -80,10 +80,27 @@ const Login = () => {
         otp: r_details.otp,
         invitationCode: r_details.invitationCode,
       };
-      const response = await axios.post("/signup", data);
+      const response = await axios.post("/signup", data, {
+        withCredentials: true,
+      });
       getAlert(response?.data?.message || "something went wrong");
       setAuth({ accessToken: response.data.access_token });
       navigate("/home");
+    } catch (error) {
+      getAlert(error?.response?.data?.message || "something went wrong");
+    }
+  }
+
+  async function getOtp(e) {
+    e.preventDefault();
+    if (!r_details?.phoneNumber) {
+      getAlert("Enter a valid phone number");
+    }
+    try {
+      let res = await axiosPrivate.post("getOtp", {
+        phoneNumber: r_details.phoneNumber,
+      });
+      getAlert(res.data.message || "something went wrong");
     } catch (error) {
       getAlert(error?.response?.data?.message || "something went wrong");
     }
@@ -239,7 +256,10 @@ const Login = () => {
                         value={r_details.phoneNumber}
                         pattern="[0-9]{10}"
                       />
-                      <button className="rounded-md w-[20%] py-3 font-bold text-textColor uppercase bg-buttonColor">
+                      <button
+                        onClick={getOtp}
+                        className="rounded-md w-[20%] py-3 font-bold text-textColor uppercase bg-buttonColor"
+                      >
                         get otp
                       </button>
                     </div>
@@ -335,8 +355,7 @@ const Login = () => {
                     <input
                       onChange={update_register_details}
                       tabIndex={6}
-                      required={true}
-                      placeholder="Invitation code"
+                      placeholder="Invitation code (optional)"
                       className="border-[1px] rounded-md py-2 pl-4 text-xl border-thin font-bold
                 outline-none border-black bg-transparent "
                       autoComplete="false"
