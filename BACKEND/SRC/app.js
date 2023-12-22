@@ -13,7 +13,11 @@ const { handleRefreshToken } = require("../CNTROLERS/refreshTokenControler");
 const app = express();
 const PORT = process.env.PORT;
 
-if (process.env.NODE_ENV.trim() === "development") {
+// PRODUCTION ENVIRONMENT
+// check for the environment variables
+if (!process.env.PORT || !process.env.WHITELIST || !process.env.DB_LINK) {
+  console.error(new Error("ENVIRONMENT VARIABLES ARE NOT ACCESSIBLE"));
+} else {
   app.listen(PORT, (error) => {
     if (error) {
       console.error(new Error("Internal server error"));
@@ -26,25 +30,6 @@ if (process.env.NODE_ENV.trim() === "development") {
         .catch((error) => console.error(new Error(error)));
     }
   });
-} else {
-  // PRODUCTION ENVIRONMENT
-  // check for the environment variables
-  if (!process.env.PORT || !process.env.WHITELIST || !process.env.DB_LINK) {
-    console.error(new Error("ENVIRONMENT VARIABLES ARE NOT ACCESSIBEL"));
-  } else {
-    app.listen(PORT, (error) => {
-      if (error) {
-        console.error(new Error("Internal server error"));
-      } else {
-        mongoose
-          .connect(DB_LINK)
-          .then((db) => {
-            console.log("db connected and listening on " + PORT);
-          })
-          .catch((error) => console.error(new Error(error)));
-      }
-    });
-  }
 }
 
 const WHITELIST = process.env.WHITELIST;
